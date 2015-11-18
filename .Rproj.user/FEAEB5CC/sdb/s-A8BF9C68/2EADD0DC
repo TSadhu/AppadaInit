@@ -1,0 +1,18 @@
+{
+    "contents" : "#' An Appada Initialization Function\n#'\n#' This function allows you to do all the Appada twitter Initialization in one step.\n#' @param No parameter needed\n#' @keywords Appada\n#' @export\n#' @examples\n#' AppadaInit()\n\n\nAppadaInit <- function(){\n  library(bitops)\n  library(twitteR)\n  library(httr)\n  library(RCurl)\n  library(ROAuth)\n\n  consumer_key <- 'lpwWWtsF0fsEPh8oqkTkQUz3d'\n  consumer_secret <- 'v5RTADyE1jPifpmMA4DoHdjsawMVMZ4wt7tkXYz7x3x0orRjMG'\n  access_token <- '2778162067-92UZJdNRHt3a65hdVSy9xcur3rRP6jmVdL2VFZE'\n  access_secret <- ' gMxgo1doNcSa0y0PNyafhpvC9GJ2DHALdVvQ1iIRd87ad'\n\n  requestURL <- \"https://api.twitter.com/oauth/request_token\"\n  accessURL <- \"https://api.twitter.com/oauth/access_token\"\n  authURL <- \"https://api.twitter.com/oauth/authorize\"\n\n  twitCred <- OAuthFactory$new(consumerKey=consumer_key,\n                               consumerSecret=consumer_secret,\n                               requestURL=requestURL,\n                               accessURL=accessURL,\n                               authURL=authURL)\n  twitCred$handshake(cainfo = system.file(\"CurlSSL\", \"cacert.pem\", package = \"RCurl\"))\n  save(twitCred, file=\"twitter authentication.Rdata\")\n  load(\"twitter authentication.Rdata\")\n\n  consumer_key = twitCred$consumerKey\n  consumer_secret = twitCred$consumerSecret\n  access_token = twitCred$oauthKey\n  access_secret = twitCred$oauthSecret\n\n  setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)\n\n\n}\n",
+    "created" : 1447828148127.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1601875666",
+    "id" : "2EADD0DC",
+    "lastKnownWriteTime" : 1447831146,
+    "path" : "C:/Users/Tushar Sadhu/Desktop/AppadaInit/R/AppadaInit.R",
+    "project_path" : "R/AppadaInit.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

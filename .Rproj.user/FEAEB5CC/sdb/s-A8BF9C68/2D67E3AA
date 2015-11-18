@@ -1,0 +1,18 @@
+{
+    "contents" : "ShowTweets <- function(name){\n\n  library(bitops)\n  library(twitteR)\n  library(httr)\n  library(RCurl)\n  library(ROAuth)\n\n  tws <- searchTwitter(name,n=10)\n  var_tw <- sapply(tws, function(x) x$getText())\n  var_tw\n}\n",
+    "created" : 1447829853195.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "408936748",
+    "id" : "2D67E3AA",
+    "lastKnownWriteTime" : 1447831151,
+    "path" : "C:/Users/Tushar Sadhu/Desktop/AppadaInit/R/ShowTweets.R",
+    "project_path" : "R/ShowTweets.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
