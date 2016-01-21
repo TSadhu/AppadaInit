@@ -15,10 +15,10 @@ AppadaInit <- function(){
   library(RCurl)
   library(ROAuth)
 
-  consumer_key <- 'lpwWWtsF0fsEPh8oqkTkQUz3d'
-  consumer_secret <- 'v5RTADyE1jPifpmMA4DoHdjsawMVMZ4wt7tkXYz7x3x0orRjMG'
-  access_token <- '2778162067-92UZJdNRHt3a65hdVSy9xcur3rRP6jmVdL2VFZE'
-  access_secret <- ' gMxgo1doNcSa0y0PNyafhpvC9GJ2DHALdVvQ1iIRd87ad'
+  consumer_key <- ''
+  consumer_secret <- ''
+  access_token <- ''
+  access_secret <- ''
 
   requestURL <- "https://api.twitter.com/oauth/request_token"
   accessURL <- "https://api.twitter.com/oauth/access_token"
